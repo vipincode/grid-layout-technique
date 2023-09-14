@@ -1,0 +1,16 @@
+:root {
+  --primary-font: 'Open Sans', sans-serif;
+  --font-size-16: 16px;
+  --font-size-24: 24px;
+
+  --primary-color: #22a6b3;
+  --primary-light-color: #7ed6df;
+  --secondary-color: #eb4d4b;
+  --black: #0b0b0b;
+  --white: #ffffff;
+  --green: #6ab04c;
+  --gray: #c0c0c0;
+
+  --box-shadow: 0 0.1em 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 0.285em;
+}

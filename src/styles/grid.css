@@ -1,0 +1,71 @@
+/*=================================================
+ GRID LAYOUT 
+==================================================*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-template-rows: 100px 200px;
+  gap: 20px 30px;
+}
+
+/*=================================================
+ DASHBOARD GRID LAYOUT 
+==================================================*/
+header,
+main,
+aside,
+footer {
+  background-color: #bba124;
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px minmax(200px, 1fr) 100px;
+  gap: 20px;
+  grid-template-areas:
+    'header '
+    'aside '
+    'main'
+    'footer';
+}
+
+header {
+  /* grid-column: 1 / -1; */
+  /* grid-column-start: 1;
+  grid-column-end: -1; */
+  grid-area: header;
+}
+main {
+  /* grid-column: 2 / -1; */
+  grid-area: main;
+}
+aside {
+  /* grid-row: 2 / -1; */
+  grid-area: aside;
+}
+
+footer {
+  /* grid-column: 2 / -1; */
+  grid-area: footer;
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+      'header header header'
+      'aside main main'
+      'footer footer footer';
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-container {
+    grid-template-areas:
+      'header header header'
+      'aside main main'
+      'aside footer footer';
+  }
+}
